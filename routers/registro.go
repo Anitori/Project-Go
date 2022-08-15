@@ -12,9 +12,9 @@ import (
 
 func Registro(w http.ResponseWriter, r *http.Request){
 	var t models.Usuario
-	err := json.NewDecoder(r.Body).Decode((&t)) //El body de un objeto HTTP es un Stream (es un dato que se puede leer una sola vez)
+	err := json.NewDecoder(r.Body).Decode(&t) //El body de un objeto HTTP es un Stream (es un dato que se puede leer una sola vez)
 	if err != nil {
-		http.Error(w, "Error en los datos recibidos"+err.Error(), 400)
+		http.Error(w, "Error en los datos recibidos "+err.Error(), 400)
 		return
 	}
 
