@@ -43,7 +43,7 @@ if encontrado == true {
 }
 
 
-_, status, err := bd.InsertoRegistro(t) 
+_, status, err := bd.InsertooRegistro(t) 
 
 if err != nil {
 	http.Error(w, "Ocurrió un error al intentar realizar el registro de usuario"+err.Error(), 400)
