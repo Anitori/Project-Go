@@ -36,7 +36,7 @@ if len(t.Password) < 6 {
 
 //Cuando en un parametro, no voy a utilizar los otros, pongo un _
 
-_, encontrado, _ := bd.ChequeoYaExisteUsuario.(t.Email) // Si me devuelve un true, quiere decir que se quiere registrar con un correo ya existente
+_, encontrado, _ := bd.ChequeoYaExisteUsuario(t.Email) // Si me devuelve un true, quiere decir que se quiere registrar con un correo ya existente
 if encontrado == true {
 	http.Error(w, "Ya existe un usuario registrado con ese email", 400)
 	return
