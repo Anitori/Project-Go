@@ -7,7 +7,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-// InsertoRegistro es la parada final con la BD para insertar los datos del usuario.
+// InsertoRegistro es la parada final con la BD para insertar los datos del usuario..
 func InsertoRegistro(u models.Usuario) (string, bool, error){
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel () //Defer es una instrucción que la seteo al comienzo, pero se ejecuta al final de la instrucción
