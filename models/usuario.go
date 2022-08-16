@@ -19,6 +19,6 @@ type Usuario struct  {
 	Banner			string 					`bson:"banner" json:"banner,omitempty"`
 	Biografia		string 					`bson:"biografia" json:"biografia,omitempty"`
 	Ubicacion		string 					`bson:"ubicacion" json:"ubicacion,omitempty"`
-	SitioWeb		string 					`bson:"sitioweb" json:"sitioWeb8,omitempty"`
+	SitioWeb		string 					`bson:"sitioweb" json:"sitioWeb,omitempty"`
 
 }
