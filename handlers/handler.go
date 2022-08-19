@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 	"github.com/Anitori/Project-Go/middlew"
-	"github.com/Anitori/Project-Go/routers"
+	"github.com/Anitori/Project-Go/routes"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 )
@@ -19,8 +19,8 @@ func Manejadores () { // Función que va a ejecutar cuando llame a la API, defin
 
 	
 
-	router.HandleFunc("/registro", middlew.ChequeoBD(routers.Registro)).Methods("POST")
-	router.HandleFunc("/login", middlew.ChequeoBD(routers.Login)).Methods("POST")
+	router.HandleFunc("/registro", middlew.ChequeoBD(routes.Registro)).Methods("POST")
+	router.HandleFunc("/login", middlew.ChequeoBD(routes.Login)).Methods("POST")
 
 
 	 PORT := os.Getenv("PORT")
