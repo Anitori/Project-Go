@@ -8,7 +8,7 @@ import(
 
 //Permite extraer los valores del perfil
 func VerPerfil(w http.ResponseWriter, r *http.Request) {
-	ID := r.URL.Query().Get("id")
+	ID := r.URL.Query().Get("id")    //En postman, cuando es un GET y se envían datos, se hace desde parámetros, dichos parámetros se me van a incluir en la URL, de esa URL va a capturar el ID. Se separa la URL de los parámetros con un signo de pregunta.
 	if len(ID) < 1 {
 		http.Error(w, "Debe enviar el parámetro ID", http.StatusBadRequest)
 		return
