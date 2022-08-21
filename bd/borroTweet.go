@@ -3,6 +3,7 @@ package bd
 import (
 	"context"
 	"time"
+
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
@@ -18,7 +19,7 @@ func BorroTweet(ID string, UserID string) error { //el ID es el del tweet, y el 
 	objID, _ := primitive.ObjectIDFromHex(ID)
 
 	condicion := bson.M{
-		":id": objID,
+		"_id": objID,
 		"userid": UserID,
 	}
 
