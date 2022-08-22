@@ -30,6 +30,9 @@ func Manejadores () { // Función que va a ejecutar cuando llame a la API, defin
 	router.HandleFunc("/subirBanner", middlew.ChequeoBD(middlew.ValidoJWT(routers.SubirBanner))).Methods("POST") 
 	router.HandleFunc("/obtenerBanner", middlew.ChequeoBD(middlew.ValidoJWT(routers.ObtenerBanner))).Methods("GET") 
 
+	router.HandleFunc("/altaRelacion", middlew.ChequeoBD(middlew.ValidoJWT(routers.AltaRelacion))).Methods("POST") 
+
+
 
 	 PORT := os.Getenv("PORT")
 	 if PORT == "" {
