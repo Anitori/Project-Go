@@ -19,8 +19,8 @@ func BorroTweet(ID string, UserID string) error { //el ID es el del tweet, y el 
 	objID, _ := primitive.ObjectIDFromHex(ID)
 
 	condicion := bson.M{
-		"_id": objID,
-		"userid": UserID,
+		"_id":objID,   
+		"userid":UserID,
 	}
 
 	_, err := col.DeleteOne(ctx, condicion)
